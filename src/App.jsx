@@ -19,7 +19,7 @@ function App() {
   const handleSearch = () => {
     const fetchWeatherData = async () => {
       const res = await axios.get(
-        `http://api.weatherapi.com/v1/current.json?key=1ba910c90f154595ace221023250309&q=${city}&aqi=no`
+        `https://api.weatherapi.com/v1/current.json?key=1ba910c90f154595ace221023250309&q=${city}&aqi=no`
       );
       setWeather(res.data);
       setCity("");
