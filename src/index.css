@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-start: #1f2937;
+  --background-end: #0d1117;
+  --text-primary: #e5e7eb;
+  --text-secondary: #d1d5db;
+  --text-muted: #6b7280;
+  --card-bg: rgba(31, 41, 55, 0.7);
+  --card-border: rgba(229, 231, 235, 0.1);
+  --info-item-bg: #1f2937;
+  --info-item-border: #4b5563;
+  --temp-color: #60a5fa; /* A slightly brighter blue for data */
+  --input-bg: #374151;
+  --button-bg: #2563eb;
+  --button-hover-bg: #1d4ed8;
+  --error-color: #ef4444;
+}
+/* General Body and Layout */
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(
+    135deg,
+    var(--background-start) 0%,
+    var(--background-end) 100%
+  );
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom selection styles */
+::selection {
+  background-color: #3b82f6;
+  color: white;
+}

@@ -1,0 +1,140 @@
+.weather-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  max-width: 500px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Heading Styles */
+.app-title {
+  font-size: 1.875rem; /* 3xl */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #f3f4f6; /* gray-100 */
+}
+
+/* Input and Button Styles */
+.input-group {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.input-field {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  background: var(--input-bg);
+  border: 1px solid var(--info-item-border);
+  color: var(--text-secondary);
+  border-radius: 9999px; /* rounded-full */
+  outline: none;
+  transition: border-color 0.2s;
+}
+.input-field:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px #3b82f6;
+}
+.input-field::placeholder {
+  color: var(--text-muted);
+}
+
+.btn {
+  background: var(--button-bg);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.btn:hover {
+  background: var(--button-hover-bg);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Error Message Styles */
+/* .error-message {
+  display: none;
+  color: var(--error-color);
+  margin-top: 1rem;
+  text-align: center;
+} */
+
+/* Weather Info Section */
+.weather-info {
+  /* display: none; Hide by default */
+  margin-top: 2rem;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.weather-info-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.city-name {
+  font-size: 2.25rem; /* 4xl */
+  font-weight: 800;
+  color: #f3f4f6;
+  margin-bottom: 0.5rem;
+}
+
+.weather-description {
+  font-size: 1.25rem; /* xl */
+  color: #d1d5db; /* gray-300 */
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid for weather details */
+.weather-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+.info-item {
+  background-color: var(--info-item-bg);
+  padding: 1rem;
+  border-radius: 0.75rem; /* xl */
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.info-label {
+  font-size: 0.875rem; /* sm */
+  color: #9ca3af; /* gray-400 */
+  margin-bottom: 0.5rem;
+}
+
+.info-value {
+  font-size: 2.25rem; /* 4xl */
+  font-weight: 700;
+  color: var(--temp-color);
+  margin-top: 0.5rem;
+}
